@@ -96,10 +96,11 @@ function getGamesToShowFunc(state, lowerTest = null, upperTest = null) {
             const gameGenre = Array.from(game.categories).filter((val) =>
               applied_genre_filter_val.has(val)
             );
-            if (gameGenre.length === 0) {
-              return false;
+            // AND for genres filters
+            if (gameGenre.length === applied_genre_filter_val.size) {
+              return true;
             }
-            return true;
+            return false;
           })
         );
       }
@@ -112,7 +113,7 @@ function getGamesToShowFunc(state, lowerTest = null, upperTest = null) {
         );
       }
 
-      console.log(applied_filters);
+      //console.log(applied_filters);
 
       let res = state.games;
 
