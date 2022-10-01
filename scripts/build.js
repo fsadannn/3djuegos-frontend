@@ -38,7 +38,9 @@ const options = {
     signAndEditExecutable: 'false',
   },
   electronDownload: {
-    customDir: process.env.ELECTRON_CACHED_FILE || null,
+    mirror: 'http://localhost/',
+    customDir: 'electron',
+    customFilename: 'electron-v11.2.3-win32-x64.zip',
   },
 };
 

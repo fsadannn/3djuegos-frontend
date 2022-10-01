@@ -22,8 +22,8 @@
 
               <v-spacer></v-spacer>
 
-              <v-layout justify-center>
-                {{game.type}}
+              <v-layout justify-center shrink>
+                <span class="px-3 py-1 purple darken-1" style="border-radius: 1rem;">{{game.classification}}</span>
               </v-layout>
 
               <v-spacer></v-spacer>
@@ -40,9 +40,8 @@
         <v-layout column fill-height justify-end>
           <!-- <v-spacer></v-spacer> -->
           <v-layout row shrink>
-            <v-flex xs10 class="pt-2" >
-
-            <span class="ml-2">{{game.name}}</span>
+            <v-flex xs10 class="pt-2 pl-2" >
+            <span>{{game.name}}</span>
             </v-flex>
             <v-flex xs2>
 
@@ -87,89 +86,11 @@ export default {
       dialog:false,
       activeGame:null,
       lazy:require('../assets/img/lazy.jpg')
-      // path : '../static/images/0rbitalis.jpg',
-      // image: require(this.path)
-      
     }
   },
   components:{
   },
-  computed:{
-    image(){
-      // console.log(require(path.join('..','/static/images',this.game.image)))
-    }
-  },
-  methods:{
-    
-    icon:function(platform){
-      switch (platform){
-        case 'XBOX':
-        return 'mdi-xbox';
-        case 'PC':
-        return 'mdi-windows';
-        case 'PSP':
-        return 'mdi-gamepad-variant';
-        case 'Android':
-        return 'mdi-android';
-        case 'Nintendo Switch':
-        return 'mdi-nintendo-switch';
-        case 'DS':
-        return 'mdi-gamepad';
-        case 'iOS':
-        return 'mdi-apple-ios';
-        case 'PS1':
-        return 'mdi-playstation';
-        case 'PS2':
-        return 'mdi-playstation';
-        case 'PS3':
-        return 'mdi-playstation';
-        case 'PS4':
-        return 'mdi-playstation';
-        case 'PS5':
-        return 'mdi-playstation';
-        case '3DS':
-        return 'mdi-gamepad';
-        case 'Xbox 360':
-        return 'mdi-xbox';
-        case 'Wii':
-        return 'mdi-wii';
-        case 'NES':
-        return 'mdi-gamepad-circle';
-        case 'Vita':
-        return 'mdi-gamepad-variant';
-        case 'Web':
-        return 'mdi-web';
-        case 'Xbox One':
-        return 'mdi-xbox';
-        case 'Wii U':
-        return 'mdi-wiiu';
-        case 'GB':
-        return 'mdi-gamepad';
-        case 'N64':
-        return 'mdi-gamepad-round';
-        case 'GBA':
-        return 'mdi-gamepad';
-        case 'XBOX':
-        return 'mdi-xbox';
-        case 'Mac':
-        return 'mdi-apple-keyboard-command';
-        case 'GBC':
-        return 'mdi-gamepad';
-        case 'SNES':
-        return 'mdi-gamepad';
-        case 'GC':
-        return 'mdi-gamepad';
-        case 'Linux':
-        return 'mdi-linux';
-        case 'Móvil':
-        return 'mdi-cellphone-android';
-        case 'Xbox Scarlett':
-        return 'mdi-xbox';
-        
-        return 'mdi-gamepad'
-        
-      }
-    }
-  }
+  computed:{},
+  methods:{}
 };
 </script>

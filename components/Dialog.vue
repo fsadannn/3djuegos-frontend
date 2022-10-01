@@ -46,7 +46,7 @@
                           <blockquote class="blockquote font-weight-medium">Tipo:&nbsp;&nbsp;{{game.classification}}</blockquote>
                           <blockquote class="blockquote font-weight-medium">Eposodios:&nbsp;&nbsp;{{game.episodes}}</blockquote>
                           <blockquote class="blockquote font-weight-medium" style="padding-bottom:0">Géneros:</blockquote>
-                          <v-layout row wrap>
+                          <v-layout row wrap class="pl-1 pr-1">
                             <blockquote class="blockquote" v-for="genre in game.categories" :key="genre"><v-icon>mdi-meteor</v-icon>{{genre}}</blockquote>
                           </v-layout>
                         </v-card>
@@ -74,84 +74,11 @@ export default {
   data: () => ({}),
   computed: {},
   methods: {
-    preventBack: function(){
-      ; 
-    },
     handleKeys: function(event) {
-     
       if (event.button == 3){
         this.$emit('close')
       }
     },
-    icon:function(platform){
-      switch (platform){
-        case 'XBOX':
-        return 'mdi-xbox';
-        case 'PC':
-        return 'mdi-windows';
-        case 'PSP':
-        return 'mdi-gamepad-variant';
-        case 'Android':
-        return 'mdi-android';
-        case 'Nintendo Switch':
-        return 'mdi-nintendo-switch';
-        case 'DS':
-        return 'mdi-gamepad';
-        case 'iOS':
-        return 'mdi-apple-ios';
-        case 'PS1':
-        return 'mdi-playstation';
-        case 'PS2':
-        return 'mdi-playstation';
-        case 'PS3':
-        return 'mdi-playstation';
-        case 'PS4':
-        return 'mdi-playstation';
-        case 'PS5':
-        return 'mdi-playstation';
-        case '3DS':
-        return 'mdi-gamepad';
-        case 'Xbox 360':
-        return 'mdi-xbox';
-        case 'Wii':
-        return 'mdi-wii';
-        case 'NES':
-        return 'mdi-gamepad-circle';
-        case 'Vita':
-        return 'mdi-gamepad-variant';
-        case 'Web':
-        return 'mdi-web';
-        case 'Xbox One':
-        return 'mdi-xbox';
-        case 'Wii U':
-        return 'mdi-wiiu';
-        case 'GB':
-        return 'mdi-gamepad';
-        case 'N64':
-        return 'mdi-gamepad-round';
-        case 'GBA':
-        return 'mdi-gamepad';
-        case 'XBOX':
-        return 'mdi-xbox';
-        case 'Mac':
-        return 'mdi-apple-keyboard-command';
-        case 'GBC':
-        return 'mdi-gamepad';
-        case 'SNES':
-        return 'mdi-gamepad';
-        case 'GC':
-        return 'mdi-gamepad';
-        case 'Linux':
-        return 'mdi-linux';
-        case 'Móvil':
-        return 'mdi-cellphone-android';
-        case 'Xbox Scarlett':
-        return 'mdi-xbox';
-        
-        return 'mdi-gamepad'
-        
-      }
-    }
   }
 };
 </script>

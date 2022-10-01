@@ -25,3 +25,4 @@ static/images
 compiled
 db.tar.xz
 .env
+*.zip
